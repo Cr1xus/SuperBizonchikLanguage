@@ -1,5 +1,5 @@
 
-def singBottlesSong()
+func singBottlesSong()
     b = 0;
     c = 99;
     while b < c do

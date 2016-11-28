@@ -1,6 +1,6 @@
 Println=1
 Print=2
-Def=3
+Func=3
 If=4
 Else=5
 Return=6
@@ -39,7 +39,7 @@ Comment=38
 Space=39
 'println'=1
 'print'=2
-'def'=3
+'func'=3
 'if'=4
 'else'=5
 'return'=6

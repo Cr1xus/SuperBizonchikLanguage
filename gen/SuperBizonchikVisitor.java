@@ -1,4 +1,4 @@
-// Generated from /Users/Cr1xus/Documents/git_projects/SuperBizonchikLanguage/src/SuperBizonchik.g4 by ANTLR 4.5.1
+// Generated from /Users/Cr1xus/Documents/git_projects/SuperBizonchikLang/SuperBizonchikLanguage/src/SuperBizonchik.g4 by ANTLR 4.5.1
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**

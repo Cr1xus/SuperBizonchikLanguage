@@ -42,7 +42,7 @@ elseStat
  ;
 
 functionDecl
- : Def Identifier '(' idList? ')' block End
+ : Func Identifier '(' idList? ')' block End
  ;
 
 
@@ -86,7 +86,7 @@ expression
 
 Println  : 'println';
 Print    : 'print';
-Def      : 'def';
+Func     : 'func';
 If       : 'if';
 Else     : 'else';
 Return   : 'return';
@@ -142,7 +142,7 @@ Comment
  ;
 
 Space
- : [ \t\r\n\u000C] -> skip
+ : [ \t\r\n] -> skip
  ;
 
 fragment Int

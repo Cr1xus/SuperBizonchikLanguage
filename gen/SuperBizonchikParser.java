@@ -1,4 +1,4 @@
-// Generated from /Users/Cr1xus/Documents/git_projects/SuperBizonchikLanguage/src/SuperBizonchik.g4 by ANTLR 4.5.1
+// Generated from /Users/Cr1xus/Documents/git_projects/SuperBizonchikLang/SuperBizonchikLanguage/src/SuperBizonchik.g4 by ANTLR 4.5.1
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -16,7 +16,7 @@ public class SuperBizonchikParser extends Parser {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		Println=1, Print=2, Def=3, If=4, Else=5, Return=6, While=7, To=8, Do=9, 
+		Println=1, Print=2, Func=3, If=4, Else=5, Return=6, While=7, To=8, Do=9, 
 		End=10, Null=11, Or=12, And=13, Equals=14, NEquals=15, GTEquals=16, LTEquals=17, 
 		Pow=18, Excl=19, GT=20, LT=21, Add=22, Subtract=23, Multiply=24, Divide=25, 
 		Modulus=26, OBrace=27, CBrace=28, OParen=29, CParen=30, SColon=31, Assign=32, 
@@ -33,13 +33,13 @@ public class SuperBizonchikParser extends Parser {
 	};
 
 	private static final String[] _LITERAL_NAMES = {
-		null, "'println'", "'print'", "'def'", "'if'", "'else'", "'return'", "'while'", 
-		"'to'", "'do'", "'end'", "'null'", "'||'", "'&&'", "'=='", "'!='", "'>='", 
-		"'<='", "'^'", "'!'", "'>'", "'<'", "'+'", "'-'", "'*'", "'/'", "'%'", 
-		"'{'", "'}'", "'('", "')'", "';'", "'='", "','"
+		null, "'println'", "'print'", "'func'", "'if'", "'else'", "'return'", 
+		"'while'", "'to'", "'do'", "'end'", "'null'", "'||'", "'&&'", "'=='", 
+		"'!='", "'>='", "'<='", "'^'", "'!'", "'>'", "'<'", "'+'", "'-'", "'*'", 
+		"'/'", "'%'", "'{'", "'}'", "'('", "')'", "';'", "'='", "','"
 	};
 	private static final String[] _SYMBOLIC_NAMES = {
-		null, "Println", "Print", "Def", "If", "Else", "Return", "While", "To", 
+		null, "Println", "Print", "Func", "If", "Else", "Return", "While", "To", 
 		"Do", "End", "Null", "Or", "And", "Equals", "NEquals", "GTEquals", "LTEquals", 
 		"Pow", "Excl", "GT", "LT", "Add", "Subtract", "Multiply", "Divide", "Modulus", 
 		"OBrace", "CBrace", "OParen", "CParen", "SColon", "Assign", "Comma", "Bool", 
@@ -187,7 +187,7 @@ public class SuperBizonchikParser extends Parser {
 			setState(35);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << Println) | (1L << Print) | (1L << Def) | (1L << If) | (1L << While) | (1L << Identifier))) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << Println) | (1L << Print) | (1L << Func) | (1L << If) | (1L << While) | (1L << Identifier))) != 0)) {
 				{
 				setState(33);
 				switch (_input.LA(1)) {
@@ -201,7 +201,7 @@ public class SuperBizonchikParser extends Parser {
 					statement();
 					}
 					break;
-				case Def:
+				case Func:
 					{
 					setState(32);
 					functionDecl();
@@ -770,7 +770,7 @@ public class SuperBizonchikParser extends Parser {
 	}
 
 	public static class FunctionDeclContext extends ParserRuleContext {
-		public TerminalNode Def() { return getToken(SuperBizonchikParser.Def, 0); }
+		public TerminalNode Func() { return getToken(SuperBizonchikParser.Func, 0); }
 		public TerminalNode Identifier() { return getToken(SuperBizonchikParser.Identifier, 0); }
 		public BlockContext block() {
 			return getRuleContext(BlockContext.class,0);
@@ -806,7 +806,7 @@ public class SuperBizonchikParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(104);
-			match(Def);
+			match(Func);
 			setState(105);
 			match(Identifier);
 			setState(106);
