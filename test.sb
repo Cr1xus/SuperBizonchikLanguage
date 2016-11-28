@@ -1,0 +1,26 @@
+
+def singBottlesSong()
+    b = 0;
+    c = 99;
+    while b < c do
+        print(c);
+        print(" bottles of beer on the wall,");
+        print(c);
+        println(" bottles of beer.");
+        c = c - 1;
+        print("Take one down and pass it around,");
+
+        if c == 0  do
+            println(" no more bottles of beer on the wall.");
+        else do
+            print(c);
+            println(" bottles of beer on the wall.");
+        end
+    end
+    println("No more bottles of beer on the wall, no more bottles of beer. ");
+    println("Go to the store and buy some more, 99 bottles of beer on the wall. ");
+end
+
+singBottlesSong();
+
+
