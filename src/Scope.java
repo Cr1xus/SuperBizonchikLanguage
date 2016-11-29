@@ -24,6 +24,17 @@ public class Scope {
     }
 
     public void assign(String var, SuperBizonchikValue value) {
+
+        if(value == SuperBizonchikValue.DECREMENT){
+            value = this.resolve(var);
+            value.decrementValue(1);
+        }
+
+        if(value == SuperBizonchikValue.INCREMENT){
+            value = this.resolve(var);
+            value.incrementValue(1);
+        }
+
         if(resolve(var) != null) {
             // There is already such a variable, re-assign it
             this.reAssign(var, value);
@@ -32,17 +43,6 @@ public class Scope {
             // A newly declared variable
             variables.put(var, value);
         }
-    }
-
-    public Scope copy() {
-        // Create a shallow copy of this scope. Used in case functions are
-        // are recursively called. If we wouldn't create a copy in such cases,
-        // changing the variables would result in changes ro the Maps from
-        // other "recursive scopes".
-        Scope s = new Scope();
-        s.variables = new HashMap<String, SuperBizonchikValue>(this.variables);
-        s.parent = this.parent;
-        return s;
     }
 
     public boolean isGlobalScope() {

@@ -17,10 +17,11 @@ public class SuperBizonchikParser extends Parser {
 		new PredictionContextCache();
 	public static final int
 		Println=1, Print=2, Func=3, If=4, Else=5, Return=6, While=7, To=8, Do=9, 
-		End=10, Null=11, Or=12, And=13, Equals=14, NEquals=15, GTEquals=16, LTEquals=17, 
-		Pow=18, Excl=19, GT=20, LT=21, Add=22, Subtract=23, Multiply=24, Divide=25, 
-		Modulus=26, OBrace=27, CBrace=28, OParen=29, CParen=30, SColon=31, Assign=32, 
-		Comma=33, Bool=34, Number=35, Identifier=36, String=37, Comment=38, Space=39;
+		End=10, Null=11, Decrement=12, Increment=13, Or=14, And=15, Equals=16, 
+		NEquals=17, GTEquals=18, LTEquals=19, Pow=20, Excl=21, GT=22, LT=23, Add=24, 
+		Subtract=25, Multiply=26, Divide=27, Modulus=28, OBrace=29, CBrace=30, 
+		OParen=31, CParen=32, SColon=33, Assign=34, Comma=35, Bool=36, Number=37, 
+		Identifier=38, String=39, Comment=40, Space=41;
 	public static final int
 		RULE_parse = 0, RULE_block = 1, RULE_statement = 2, RULE_assignment = 3, 
 		RULE_functionCall = 4, RULE_ifStatement = 5, RULE_ifStat = 6, RULE_elseIfStat = 7, 
@@ -34,16 +35,18 @@ public class SuperBizonchikParser extends Parser {
 
 	private static final String[] _LITERAL_NAMES = {
 		null, "'println'", "'print'", "'func'", "'if'", "'else'", "'return'", 
-		"'while'", "'to'", "'do'", "'end'", "'null'", "'||'", "'&&'", "'=='", 
-		"'!='", "'>='", "'<='", "'^'", "'!'", "'>'", "'<'", "'+'", "'-'", "'*'", 
-		"'/'", "'%'", "'{'", "'}'", "'('", "')'", "';'", "'='", "','"
+		"'while'", "'to'", "'do'", "'end'", "'null'", "'--'", "'++'", "'||'", 
+		"'&&'", "'=='", "'!='", "'>='", "'<='", "'^'", "'!'", "'>'", "'<'", "'+'", 
+		"'-'", "'*'", "'/'", "'%'", "'{'", "'}'", "'('", "')'", "';'", "'='", 
+		"','"
 	};
 	private static final String[] _SYMBOLIC_NAMES = {
 		null, "Println", "Print", "Func", "If", "Else", "Return", "While", "To", 
-		"Do", "End", "Null", "Or", "And", "Equals", "NEquals", "GTEquals", "LTEquals", 
-		"Pow", "Excl", "GT", "LT", "Add", "Subtract", "Multiply", "Divide", "Modulus", 
-		"OBrace", "CBrace", "OParen", "CParen", "SColon", "Assign", "Comma", "Bool", 
-		"Number", "Identifier", "String", "Comment", "Space"
+		"Do", "End", "Null", "Decrement", "Increment", "Or", "And", "Equals", 
+		"NEquals", "GTEquals", "LTEquals", "Pow", "Excl", "GT", "LT", "Add", "Subtract", 
+		"Multiply", "Divide", "Modulus", "OBrace", "CBrace", "OParen", "CParen", 
+		"SColon", "Assign", "Comma", "Bool", "Number", "Identifier", "String", 
+		"Comment", "Space"
 	};
 	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 
@@ -352,14 +355,28 @@ public class SuperBizonchikParser extends Parser {
 		AssignmentContext _localctx = new AssignmentContext(_ctx, getState());
 		enterRule(_localctx, 6, RULE_assignment);
 		try {
-			enterOuterAlt(_localctx, 1);
-			{
-			setState(54);
-			match(Identifier);
-			setState(55);
-			match(Assign);
-			setState(56);
-			expression(0);
+			setState(59);
+			switch ( getInterpreter().adaptivePredict(_input,4,_ctx) ) {
+			case 1:
+				enterOuterAlt(_localctx, 1);
+				{
+				setState(54);
+				match(Identifier);
+				setState(55);
+				match(Assign);
+				setState(56);
+				expression(0);
+				}
+				break;
+			case 2:
+				enterOuterAlt(_localctx, 2);
+				{
+				setState(57);
+				match(Identifier);
+				setState(58);
+				expression(0);
+				}
+				break;
 			}
 		}
 		catch (RecognitionException re) {
@@ -450,26 +467,26 @@ public class SuperBizonchikParser extends Parser {
 		enterRule(_localctx, 8, RULE_functionCall);
 		int _la;
 		try {
-			setState(75);
+			setState(78);
 			switch (_input.LA(1)) {
 			case Identifier:
 				_localctx = new IdentifierFunctionCallContext(_localctx);
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(58);
-				match(Identifier);
-				setState(59);
-				match(OParen);
 				setState(61);
+				match(Identifier);
+				setState(62);
+				match(OParen);
+				setState(64);
 				_la = _input.LA(1);
-				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << Println) | (1L << Print) | (1L << Null) | (1L << Excl) | (1L << Subtract) | (1L << OParen) | (1L << Bool) | (1L << Number) | (1L << Identifier) | (1L << String))) != 0)) {
+				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << Println) | (1L << Print) | (1L << Null) | (1L << Decrement) | (1L << Increment) | (1L << Excl) | (1L << Subtract) | (1L << OParen) | (1L << Bool) | (1L << Number) | (1L << Identifier) | (1L << String))) != 0)) {
 					{
-					setState(60);
+					setState(63);
 					exprList();
 					}
 				}
 
-				setState(63);
+				setState(66);
 				match(CParen);
 				}
 				break;
@@ -477,20 +494,20 @@ public class SuperBizonchikParser extends Parser {
 				_localctx = new PrintlnFunctionCallContext(_localctx);
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(64);
-				match(Println);
-				setState(65);
-				match(OParen);
 				setState(67);
+				match(Println);
+				setState(68);
+				match(OParen);
+				setState(70);
 				_la = _input.LA(1);
-				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << Println) | (1L << Print) | (1L << Null) | (1L << Excl) | (1L << Subtract) | (1L << OParen) | (1L << Bool) | (1L << Number) | (1L << Identifier) | (1L << String))) != 0)) {
+				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << Println) | (1L << Print) | (1L << Null) | (1L << Decrement) | (1L << Increment) | (1L << Excl) | (1L << Subtract) | (1L << OParen) | (1L << Bool) | (1L << Number) | (1L << Identifier) | (1L << String))) != 0)) {
 					{
-					setState(66);
+					setState(69);
 					expression(0);
 					}
 				}
 
-				setState(69);
+				setState(72);
 				match(CParen);
 				}
 				break;
@@ -498,13 +515,13 @@ public class SuperBizonchikParser extends Parser {
 				_localctx = new PrintFunctionCallContext(_localctx);
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(70);
-				match(Print);
-				setState(71);
-				match(OParen);
-				setState(72);
-				expression(0);
 				setState(73);
+				match(Print);
+				setState(74);
+				match(OParen);
+				setState(75);
+				expression(0);
+				setState(76);
 				match(CParen);
 				}
 				break;
@@ -564,34 +581,34 @@ public class SuperBizonchikParser extends Parser {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(77);
+			setState(80);
 			ifStat();
-			setState(81);
+			setState(84);
 			_errHandler.sync(this);
-			_alt = getInterpreter().adaptivePredict(_input,7,_ctx);
+			_alt = getInterpreter().adaptivePredict(_input,8,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
-					setState(78);
+					setState(81);
 					elseIfStat();
 					}
 					} 
 				}
-				setState(83);
+				setState(86);
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,7,_ctx);
+				_alt = getInterpreter().adaptivePredict(_input,8,_ctx);
 			}
-			setState(85);
+			setState(88);
 			_la = _input.LA(1);
 			if (_la==Else) {
 				{
-				setState(84);
+				setState(87);
 				elseStat();
 				}
 			}
 
-			setState(87);
+			setState(90);
 			match(End);
 			}
 		}
@@ -640,13 +657,13 @@ public class SuperBizonchikParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(89);
-			match(If);
-			setState(90);
-			expression(0);
-			setState(91);
-			match(Do);
 			setState(92);
+			match(If);
+			setState(93);
+			expression(0);
+			setState(94);
+			match(Do);
+			setState(95);
 			block();
 			}
 		}
@@ -696,15 +713,15 @@ public class SuperBizonchikParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(94);
-			match(Else);
-			setState(95);
-			match(If);
-			setState(96);
-			expression(0);
 			setState(97);
-			match(Do);
+			match(Else);
 			setState(98);
+			match(If);
+			setState(99);
+			expression(0);
+			setState(100);
+			match(Do);
+			setState(101);
 			block();
 			}
 		}
@@ -750,11 +767,11 @@ public class SuperBizonchikParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(100);
+			setState(103);
 			match(Else);
-			setState(101);
+			setState(104);
 			match(Do);
-			setState(102);
+			setState(105);
 			block();
 			}
 		}
@@ -805,26 +822,26 @@ public class SuperBizonchikParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(104);
+			setState(107);
 			match(Func);
-			setState(105);
-			match(Identifier);
-			setState(106);
-			match(OParen);
 			setState(108);
+			match(Identifier);
+			setState(109);
+			match(OParen);
+			setState(111);
 			_la = _input.LA(1);
 			if (_la==Identifier) {
 				{
-				setState(107);
+				setState(110);
 				idList();
 				}
 			}
 
-			setState(110);
+			setState(113);
 			match(CParen);
-			setState(111);
+			setState(114);
 			block();
-			setState(112);
+			setState(115);
 			match(End);
 			}
 		}
@@ -874,15 +891,15 @@ public class SuperBizonchikParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(114);
-			match(While);
-			setState(115);
-			expression(0);
-			setState(116);
-			match(Do);
 			setState(117);
-			block();
+			match(While);
 			setState(118);
+			expression(0);
+			setState(119);
+			match(Do);
+			setState(120);
+			block();
+			setState(121);
 			match(End);
 			}
 		}
@@ -928,21 +945,21 @@ public class SuperBizonchikParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(120);
+			setState(123);
 			match(Identifier);
-			setState(125);
+			setState(128);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==Comma) {
 				{
 				{
-				setState(121);
+				setState(124);
 				match(Comma);
-				setState(122);
+				setState(125);
 				match(Identifier);
 				}
 				}
-				setState(127);
+				setState(130);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
@@ -992,21 +1009,21 @@ public class SuperBizonchikParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(128);
+			setState(131);
 			expression(0);
-			setState(133);
+			setState(136);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==Comma) {
 				{
 				{
-				setState(129);
+				setState(132);
 				match(Comma);
-				setState(130);
+				setState(133);
 				expression(0);
 				}
 				}
-				setState(135);
+				setState(138);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
@@ -1034,28 +1051,6 @@ public class SuperBizonchikParser extends Parser {
 			super.copyFrom(ctx);
 		}
 	}
-	public static class LtExpressionContext extends ExpressionContext {
-		public List<ExpressionContext> expression() {
-			return getRuleContexts(ExpressionContext.class);
-		}
-		public ExpressionContext expression(int i) {
-			return getRuleContext(ExpressionContext.class,i);
-		}
-		public LtExpressionContext(ExpressionContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SuperBizonchikListener ) ((SuperBizonchikListener)listener).enterLtExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SuperBizonchikListener ) ((SuperBizonchikListener)listener).exitLtExpression(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof SuperBizonchikVisitor ) return ((SuperBizonchikVisitor<? extends T>)visitor).visitLtExpression(this);
-			else return visitor.visitChildren(this);
-		}
-	}
 	public static class GtExpressionContext extends ExpressionContext {
 		public List<ExpressionContext> expression() {
 			return getRuleContexts(ExpressionContext.class);
@@ -1075,45 +1070,6 @@ public class SuperBizonchikParser extends Parser {
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof SuperBizonchikVisitor ) return ((SuperBizonchikVisitor<? extends T>)visitor).visitGtExpression(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-	public static class BoolExpressionContext extends ExpressionContext {
-		public TerminalNode Bool() { return getToken(SuperBizonchikParser.Bool, 0); }
-		public BoolExpressionContext(ExpressionContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SuperBizonchikListener ) ((SuperBizonchikListener)listener).enterBoolExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SuperBizonchikListener ) ((SuperBizonchikListener)listener).exitBoolExpression(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof SuperBizonchikVisitor ) return ((SuperBizonchikVisitor<? extends T>)visitor).visitBoolExpression(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-	public static class NotEqExpressionContext extends ExpressionContext {
-		public List<ExpressionContext> expression() {
-			return getRuleContexts(ExpressionContext.class);
-		}
-		public ExpressionContext expression(int i) {
-			return getRuleContext(ExpressionContext.class,i);
-		}
-		public NotEqExpressionContext(ExpressionContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SuperBizonchikListener ) ((SuperBizonchikListener)listener).enterNotEqExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SuperBizonchikListener ) ((SuperBizonchikListener)listener).exitNotEqExpression(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof SuperBizonchikVisitor ) return ((SuperBizonchikVisitor<? extends T>)visitor).visitNotEqExpression(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1214,6 +1170,23 @@ public class SuperBizonchikParser extends Parser {
 			else return visitor.visitChildren(this);
 		}
 	}
+	public static class IncrementExpressionContext extends ExpressionContext {
+		public TerminalNode Increment() { return getToken(SuperBizonchikParser.Increment, 0); }
+		public IncrementExpressionContext(ExpressionContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof SuperBizonchikListener ) ((SuperBizonchikListener)listener).enterIncrementExpression(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof SuperBizonchikListener ) ((SuperBizonchikListener)listener).exitIncrementExpression(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof SuperBizonchikVisitor ) return ((SuperBizonchikVisitor<? extends T>)visitor).visitIncrementExpression(this);
+			else return visitor.visitChildren(this);
+		}
+	}
 	public static class GtEqExpressionContext extends ExpressionContext {
 		public List<ExpressionContext> expression() {
 			return getRuleContexts(ExpressionContext.class);
@@ -1233,6 +1206,183 @@ public class SuperBizonchikParser extends Parser {
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
 			if ( visitor instanceof SuperBizonchikVisitor ) return ((SuperBizonchikVisitor<? extends T>)visitor).visitGtEqExpression(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	public static class AndExpressionContext extends ExpressionContext {
+		public List<ExpressionContext> expression() {
+			return getRuleContexts(ExpressionContext.class);
+		}
+		public ExpressionContext expression(int i) {
+			return getRuleContext(ExpressionContext.class,i);
+		}
+		public AndExpressionContext(ExpressionContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof SuperBizonchikListener ) ((SuperBizonchikListener)listener).enterAndExpression(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof SuperBizonchikListener ) ((SuperBizonchikListener)listener).exitAndExpression(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof SuperBizonchikVisitor ) return ((SuperBizonchikVisitor<? extends T>)visitor).visitAndExpression(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	public static class StringExpressionContext extends ExpressionContext {
+		public TerminalNode String() { return getToken(SuperBizonchikParser.String, 0); }
+		public StringExpressionContext(ExpressionContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof SuperBizonchikListener ) ((SuperBizonchikListener)listener).enterStringExpression(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof SuperBizonchikListener ) ((SuperBizonchikListener)listener).exitStringExpression(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof SuperBizonchikVisitor ) return ((SuperBizonchikVisitor<? extends T>)visitor).visitStringExpression(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	public static class ExpressionExpressionContext extends ExpressionContext {
+		public ExpressionContext expression() {
+			return getRuleContext(ExpressionContext.class,0);
+		}
+		public ExpressionExpressionContext(ExpressionContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof SuperBizonchikListener ) ((SuperBizonchikListener)listener).enterExpressionExpression(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof SuperBizonchikListener ) ((SuperBizonchikListener)listener).exitExpressionExpression(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof SuperBizonchikVisitor ) return ((SuperBizonchikVisitor<? extends T>)visitor).visitExpressionExpression(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	public static class NullExpressionContext extends ExpressionContext {
+		public TerminalNode Null() { return getToken(SuperBizonchikParser.Null, 0); }
+		public NullExpressionContext(ExpressionContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof SuperBizonchikListener ) ((SuperBizonchikListener)listener).enterNullExpression(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof SuperBizonchikListener ) ((SuperBizonchikListener)listener).exitNullExpression(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof SuperBizonchikVisitor ) return ((SuperBizonchikVisitor<? extends T>)visitor).visitNullExpression(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	public static class FunctionCallExpressionContext extends ExpressionContext {
+		public FunctionCallContext functionCall() {
+			return getRuleContext(FunctionCallContext.class,0);
+		}
+		public FunctionCallExpressionContext(ExpressionContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof SuperBizonchikListener ) ((SuperBizonchikListener)listener).enterFunctionCallExpression(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof SuperBizonchikListener ) ((SuperBizonchikListener)listener).exitFunctionCallExpression(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof SuperBizonchikVisitor ) return ((SuperBizonchikVisitor<? extends T>)visitor).visitFunctionCallExpression(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	public static class LtEqExpressionContext extends ExpressionContext {
+		public List<ExpressionContext> expression() {
+			return getRuleContexts(ExpressionContext.class);
+		}
+		public ExpressionContext expression(int i) {
+			return getRuleContext(ExpressionContext.class,i);
+		}
+		public LtEqExpressionContext(ExpressionContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof SuperBizonchikListener ) ((SuperBizonchikListener)listener).enterLtEqExpression(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof SuperBizonchikListener ) ((SuperBizonchikListener)listener).exitLtEqExpression(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof SuperBizonchikVisitor ) return ((SuperBizonchikVisitor<? extends T>)visitor).visitLtEqExpression(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	public static class LtExpressionContext extends ExpressionContext {
+		public List<ExpressionContext> expression() {
+			return getRuleContexts(ExpressionContext.class);
+		}
+		public ExpressionContext expression(int i) {
+			return getRuleContext(ExpressionContext.class,i);
+		}
+		public LtExpressionContext(ExpressionContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof SuperBizonchikListener ) ((SuperBizonchikListener)listener).enterLtExpression(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof SuperBizonchikListener ) ((SuperBizonchikListener)listener).exitLtExpression(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof SuperBizonchikVisitor ) return ((SuperBizonchikVisitor<? extends T>)visitor).visitLtExpression(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	public static class BoolExpressionContext extends ExpressionContext {
+		public TerminalNode Bool() { return getToken(SuperBizonchikParser.Bool, 0); }
+		public BoolExpressionContext(ExpressionContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof SuperBizonchikListener ) ((SuperBizonchikListener)listener).enterBoolExpression(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof SuperBizonchikListener ) ((SuperBizonchikListener)listener).exitBoolExpression(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof SuperBizonchikVisitor ) return ((SuperBizonchikVisitor<? extends T>)visitor).visitBoolExpression(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	public static class NotEqExpressionContext extends ExpressionContext {
+		public List<ExpressionContext> expression() {
+			return getRuleContexts(ExpressionContext.class);
+		}
+		public ExpressionContext expression(int i) {
+			return getRuleContext(ExpressionContext.class,i);
+		}
+		public NotEqExpressionContext(ExpressionContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof SuperBizonchikListener ) ((SuperBizonchikListener)listener).enterNotEqExpression(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof SuperBizonchikListener ) ((SuperBizonchikListener)listener).exitNotEqExpression(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof SuperBizonchikVisitor ) return ((SuperBizonchikVisitor<? extends T>)visitor).visitNotEqExpression(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1343,64 +1493,6 @@ public class SuperBizonchikParser extends Parser {
 			else return visitor.visitChildren(this);
 		}
 	}
-	public static class AndExpressionContext extends ExpressionContext {
-		public List<ExpressionContext> expression() {
-			return getRuleContexts(ExpressionContext.class);
-		}
-		public ExpressionContext expression(int i) {
-			return getRuleContext(ExpressionContext.class,i);
-		}
-		public AndExpressionContext(ExpressionContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SuperBizonchikListener ) ((SuperBizonchikListener)listener).enterAndExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SuperBizonchikListener ) ((SuperBizonchikListener)listener).exitAndExpression(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof SuperBizonchikVisitor ) return ((SuperBizonchikVisitor<? extends T>)visitor).visitAndExpression(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-	public static class StringExpressionContext extends ExpressionContext {
-		public TerminalNode String() { return getToken(SuperBizonchikParser.String, 0); }
-		public StringExpressionContext(ExpressionContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SuperBizonchikListener ) ((SuperBizonchikListener)listener).enterStringExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SuperBizonchikListener ) ((SuperBizonchikListener)listener).exitStringExpression(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof SuperBizonchikVisitor ) return ((SuperBizonchikVisitor<? extends T>)visitor).visitStringExpression(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-	public static class ExpressionExpressionContext extends ExpressionContext {
-		public ExpressionContext expression() {
-			return getRuleContext(ExpressionContext.class,0);
-		}
-		public ExpressionExpressionContext(ExpressionContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SuperBizonchikListener ) ((SuperBizonchikListener)listener).enterExpressionExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SuperBizonchikListener ) ((SuperBizonchikListener)listener).exitExpressionExpression(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof SuperBizonchikVisitor ) return ((SuperBizonchikVisitor<? extends T>)visitor).visitExpressionExpression(this);
-			else return visitor.visitChildren(this);
-		}
-	}
 	public static class AddExpressionContext extends ExpressionContext {
 		public List<ExpressionContext> expression() {
 			return getRuleContexts(ExpressionContext.class);
@@ -1445,61 +1537,20 @@ public class SuperBizonchikParser extends Parser {
 			else return visitor.visitChildren(this);
 		}
 	}
-	public static class NullExpressionContext extends ExpressionContext {
-		public TerminalNode Null() { return getToken(SuperBizonchikParser.Null, 0); }
-		public NullExpressionContext(ExpressionContext ctx) { copyFrom(ctx); }
+	public static class DecrementExpressionContext extends ExpressionContext {
+		public TerminalNode Decrement() { return getToken(SuperBizonchikParser.Decrement, 0); }
+		public DecrementExpressionContext(ExpressionContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SuperBizonchikListener ) ((SuperBizonchikListener)listener).enterNullExpression(this);
+			if ( listener instanceof SuperBizonchikListener ) ((SuperBizonchikListener)listener).enterDecrementExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SuperBizonchikListener ) ((SuperBizonchikListener)listener).exitNullExpression(this);
+			if ( listener instanceof SuperBizonchikListener ) ((SuperBizonchikListener)listener).exitDecrementExpression(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof SuperBizonchikVisitor ) return ((SuperBizonchikVisitor<? extends T>)visitor).visitNullExpression(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-	public static class FunctionCallExpressionContext extends ExpressionContext {
-		public FunctionCallContext functionCall() {
-			return getRuleContext(FunctionCallContext.class,0);
-		}
-		public FunctionCallExpressionContext(ExpressionContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SuperBizonchikListener ) ((SuperBizonchikListener)listener).enterFunctionCallExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SuperBizonchikListener ) ((SuperBizonchikListener)listener).exitFunctionCallExpression(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof SuperBizonchikVisitor ) return ((SuperBizonchikVisitor<? extends T>)visitor).visitFunctionCallExpression(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-	public static class LtEqExpressionContext extends ExpressionContext {
-		public List<ExpressionContext> expression() {
-			return getRuleContexts(ExpressionContext.class);
-		}
-		public ExpressionContext expression(int i) {
-			return getRuleContext(ExpressionContext.class,i);
-		}
-		public LtEqExpressionContext(ExpressionContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SuperBizonchikListener ) ((SuperBizonchikListener)listener).enterLtEqExpression(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SuperBizonchikListener ) ((SuperBizonchikListener)listener).exitLtEqExpression(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof SuperBizonchikVisitor ) return ((SuperBizonchikVisitor<? extends T>)visitor).visitLtEqExpression(this);
+			if ( visitor instanceof SuperBizonchikVisitor ) return ((SuperBizonchikVisitor<? extends T>)visitor).visitDecrementExpression(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1519,18 +1570,18 @@ public class SuperBizonchikParser extends Parser {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(151);
-			switch ( getInterpreter().adaptivePredict(_input,12,_ctx) ) {
+			setState(156);
+			switch ( getInterpreter().adaptivePredict(_input,13,_ctx) ) {
 			case 1:
 				{
 				_localctx = new UnaryMinusExpressionContext(_localctx);
 				_ctx = _localctx;
 				_prevctx = _localctx;
 
-				setState(137);
+				setState(140);
 				match(Subtract);
-				setState(138);
-				expression(23);
+				setState(141);
+				expression(25);
 				}
 				break;
 			case 2:
@@ -1538,10 +1589,10 @@ public class SuperBizonchikParser extends Parser {
 				_localctx = new NotExpressionContext(_localctx);
 				_ctx = _localctx;
 				_prevctx = _localctx;
-				setState(139);
+				setState(142);
 				match(Excl);
-				setState(140);
-				expression(22);
+				setState(143);
+				expression(24);
 				}
 				break;
 			case 3:
@@ -1549,7 +1600,7 @@ public class SuperBizonchikParser extends Parser {
 				_localctx = new NumberExpressionContext(_localctx);
 				_ctx = _localctx;
 				_prevctx = _localctx;
-				setState(141);
+				setState(144);
 				match(Number);
 				}
 				break;
@@ -1558,7 +1609,7 @@ public class SuperBizonchikParser extends Parser {
 				_localctx = new BoolExpressionContext(_localctx);
 				_ctx = _localctx;
 				_prevctx = _localctx;
-				setState(142);
+				setState(145);
 				match(Bool);
 				}
 				break;
@@ -1567,7 +1618,7 @@ public class SuperBizonchikParser extends Parser {
 				_localctx = new NullExpressionContext(_localctx);
 				_ctx = _localctx;
 				_prevctx = _localctx;
-				setState(143);
+				setState(146);
 				match(Null);
 				}
 				break;
@@ -1576,7 +1627,7 @@ public class SuperBizonchikParser extends Parser {
 				_localctx = new FunctionCallExpressionContext(_localctx);
 				_ctx = _localctx;
 				_prevctx = _localctx;
-				setState(144);
+				setState(147);
 				functionCall();
 				}
 				break;
@@ -1585,7 +1636,7 @@ public class SuperBizonchikParser extends Parser {
 				_localctx = new IdentifierExpressionContext(_localctx);
 				_ctx = _localctx;
 				_prevctx = _localctx;
-				setState(145);
+				setState(148);
 				match(Identifier);
 				}
 				break;
@@ -1594,209 +1645,227 @@ public class SuperBizonchikParser extends Parser {
 				_localctx = new StringExpressionContext(_localctx);
 				_ctx = _localctx;
 				_prevctx = _localctx;
-				setState(146);
+				setState(149);
 				match(String);
 				}
 				break;
 			case 9:
 				{
+				_localctx = new DecrementExpressionContext(_localctx);
+				_ctx = _localctx;
+				_prevctx = _localctx;
+				setState(150);
+				match(Decrement);
+				}
+				break;
+			case 10:
+				{
+				_localctx = new IncrementExpressionContext(_localctx);
+				_ctx = _localctx;
+				_prevctx = _localctx;
+				setState(151);
+				match(Increment);
+				}
+				break;
+			case 11:
+				{
 				_localctx = new ExpressionExpressionContext(_localctx);
 				_ctx = _localctx;
 				_prevctx = _localctx;
-				setState(147);
+				setState(152);
 				match(OParen);
-				setState(148);
+				setState(153);
 				expression(0);
-				setState(149);
+				setState(154);
 				match(CParen);
 				}
 				break;
 			}
 			_ctx.stop = _input.LT(-1);
-			setState(197);
+			setState(202);
 			_errHandler.sync(this);
-			_alt = getInterpreter().adaptivePredict(_input,14,_ctx);
+			_alt = getInterpreter().adaptivePredict(_input,15,_ctx);
 			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					if ( _parseListeners!=null ) triggerExitRuleEvent();
 					_prevctx = _localctx;
 					{
-					setState(195);
-					switch ( getInterpreter().adaptivePredict(_input,13,_ctx) ) {
+					setState(200);
+					switch ( getInterpreter().adaptivePredict(_input,14,_ctx) ) {
 					case 1:
 						{
 						_localctx = new PowerExpressionContext(new ExpressionContext(_parentctx, _parentState));
 						pushNewRecursionContext(_localctx, _startState, RULE_expression);
-						setState(153);
-						if (!(precpred(_ctx, 21))) throw new FailedPredicateException(this, "precpred(_ctx, 21)");
-						setState(154);
+						setState(158);
+						if (!(precpred(_ctx, 23))) throw new FailedPredicateException(this, "precpred(_ctx, 23)");
+						setState(159);
 						match(Pow);
-						setState(155);
-						expression(22);
+						setState(160);
+						expression(24);
 						}
 						break;
 					case 2:
 						{
 						_localctx = new MultiplyExpressionContext(new ExpressionContext(_parentctx, _parentState));
 						pushNewRecursionContext(_localctx, _startState, RULE_expression);
-						setState(156);
-						if (!(precpred(_ctx, 20))) throw new FailedPredicateException(this, "precpred(_ctx, 20)");
-						setState(157);
+						setState(161);
+						if (!(precpred(_ctx, 22))) throw new FailedPredicateException(this, "precpred(_ctx, 22)");
+						setState(162);
 						match(Multiply);
-						setState(158);
-						expression(21);
+						setState(163);
+						expression(23);
 						}
 						break;
 					case 3:
 						{
 						_localctx = new DivideExpressionContext(new ExpressionContext(_parentctx, _parentState));
 						pushNewRecursionContext(_localctx, _startState, RULE_expression);
-						setState(159);
-						if (!(precpred(_ctx, 19))) throw new FailedPredicateException(this, "precpred(_ctx, 19)");
-						setState(160);
+						setState(164);
+						if (!(precpred(_ctx, 21))) throw new FailedPredicateException(this, "precpred(_ctx, 21)");
+						setState(165);
 						match(Divide);
-						setState(161);
-						expression(20);
+						setState(166);
+						expression(22);
 						}
 						break;
 					case 4:
 						{
 						_localctx = new ModulusExpressionContext(new ExpressionContext(_parentctx, _parentState));
 						pushNewRecursionContext(_localctx, _startState, RULE_expression);
-						setState(162);
-						if (!(precpred(_ctx, 18))) throw new FailedPredicateException(this, "precpred(_ctx, 18)");
-						setState(163);
+						setState(167);
+						if (!(precpred(_ctx, 20))) throw new FailedPredicateException(this, "precpred(_ctx, 20)");
+						setState(168);
 						match(Modulus);
-						setState(164);
-						expression(19);
+						setState(169);
+						expression(21);
 						}
 						break;
 					case 5:
 						{
 						_localctx = new AddExpressionContext(new ExpressionContext(_parentctx, _parentState));
 						pushNewRecursionContext(_localctx, _startState, RULE_expression);
-						setState(165);
-						if (!(precpred(_ctx, 17))) throw new FailedPredicateException(this, "precpred(_ctx, 17)");
-						setState(166);
+						setState(170);
+						if (!(precpred(_ctx, 19))) throw new FailedPredicateException(this, "precpred(_ctx, 19)");
+						setState(171);
 						match(Add);
-						setState(167);
-						expression(18);
+						setState(172);
+						expression(20);
 						}
 						break;
 					case 6:
 						{
 						_localctx = new SubtractExpressionContext(new ExpressionContext(_parentctx, _parentState));
 						pushNewRecursionContext(_localctx, _startState, RULE_expression);
-						setState(168);
-						if (!(precpred(_ctx, 16))) throw new FailedPredicateException(this, "precpred(_ctx, 16)");
-						setState(169);
+						setState(173);
+						if (!(precpred(_ctx, 18))) throw new FailedPredicateException(this, "precpred(_ctx, 18)");
+						setState(174);
 						match(Subtract);
-						setState(170);
-						expression(17);
+						setState(175);
+						expression(19);
 						}
 						break;
 					case 7:
 						{
 						_localctx = new GtEqExpressionContext(new ExpressionContext(_parentctx, _parentState));
 						pushNewRecursionContext(_localctx, _startState, RULE_expression);
-						setState(171);
-						if (!(precpred(_ctx, 15))) throw new FailedPredicateException(this, "precpred(_ctx, 15)");
-						setState(172);
+						setState(176);
+						if (!(precpred(_ctx, 17))) throw new FailedPredicateException(this, "precpred(_ctx, 17)");
+						setState(177);
 						match(GTEquals);
-						setState(173);
-						expression(16);
+						setState(178);
+						expression(18);
 						}
 						break;
 					case 8:
 						{
 						_localctx = new LtEqExpressionContext(new ExpressionContext(_parentctx, _parentState));
 						pushNewRecursionContext(_localctx, _startState, RULE_expression);
-						setState(174);
-						if (!(precpred(_ctx, 14))) throw new FailedPredicateException(this, "precpred(_ctx, 14)");
-						setState(175);
+						setState(179);
+						if (!(precpred(_ctx, 16))) throw new FailedPredicateException(this, "precpred(_ctx, 16)");
+						setState(180);
 						match(LTEquals);
-						setState(176);
-						expression(15);
+						setState(181);
+						expression(17);
 						}
 						break;
 					case 9:
 						{
 						_localctx = new GtExpressionContext(new ExpressionContext(_parentctx, _parentState));
 						pushNewRecursionContext(_localctx, _startState, RULE_expression);
-						setState(177);
-						if (!(precpred(_ctx, 13))) throw new FailedPredicateException(this, "precpred(_ctx, 13)");
-						setState(178);
+						setState(182);
+						if (!(precpred(_ctx, 15))) throw new FailedPredicateException(this, "precpred(_ctx, 15)");
+						setState(183);
 						match(GT);
-						setState(179);
-						expression(14);
+						setState(184);
+						expression(16);
 						}
 						break;
 					case 10:
 						{
 						_localctx = new LtExpressionContext(new ExpressionContext(_parentctx, _parentState));
 						pushNewRecursionContext(_localctx, _startState, RULE_expression);
-						setState(180);
-						if (!(precpred(_ctx, 12))) throw new FailedPredicateException(this, "precpred(_ctx, 12)");
-						setState(181);
+						setState(185);
+						if (!(precpred(_ctx, 14))) throw new FailedPredicateException(this, "precpred(_ctx, 14)");
+						setState(186);
 						match(LT);
-						setState(182);
-						expression(13);
+						setState(187);
+						expression(15);
 						}
 						break;
 					case 11:
 						{
 						_localctx = new EqExpressionContext(new ExpressionContext(_parentctx, _parentState));
 						pushNewRecursionContext(_localctx, _startState, RULE_expression);
-						setState(183);
-						if (!(precpred(_ctx, 11))) throw new FailedPredicateException(this, "precpred(_ctx, 11)");
-						setState(184);
+						setState(188);
+						if (!(precpred(_ctx, 13))) throw new FailedPredicateException(this, "precpred(_ctx, 13)");
+						setState(189);
 						match(Equals);
-						setState(185);
-						expression(12);
+						setState(190);
+						expression(14);
 						}
 						break;
 					case 12:
 						{
 						_localctx = new NotEqExpressionContext(new ExpressionContext(_parentctx, _parentState));
 						pushNewRecursionContext(_localctx, _startState, RULE_expression);
-						setState(186);
-						if (!(precpred(_ctx, 10))) throw new FailedPredicateException(this, "precpred(_ctx, 10)");
-						setState(187);
+						setState(191);
+						if (!(precpred(_ctx, 12))) throw new FailedPredicateException(this, "precpred(_ctx, 12)");
+						setState(192);
 						match(NEquals);
-						setState(188);
-						expression(11);
+						setState(193);
+						expression(13);
 						}
 						break;
 					case 13:
 						{
 						_localctx = new AndExpressionContext(new ExpressionContext(_parentctx, _parentState));
 						pushNewRecursionContext(_localctx, _startState, RULE_expression);
-						setState(189);
-						if (!(precpred(_ctx, 9))) throw new FailedPredicateException(this, "precpred(_ctx, 9)");
-						setState(190);
+						setState(194);
+						if (!(precpred(_ctx, 11))) throw new FailedPredicateException(this, "precpred(_ctx, 11)");
+						setState(195);
 						match(And);
-						setState(191);
-						expression(10);
+						setState(196);
+						expression(12);
 						}
 						break;
 					case 14:
 						{
 						_localctx = new OrExpressionContext(new ExpressionContext(_parentctx, _parentState));
 						pushNewRecursionContext(_localctx, _startState, RULE_expression);
-						setState(192);
-						if (!(precpred(_ctx, 8))) throw new FailedPredicateException(this, "precpred(_ctx, 8)");
-						setState(193);
+						setState(197);
+						if (!(precpred(_ctx, 10))) throw new FailedPredicateException(this, "precpred(_ctx, 10)");
+						setState(198);
 						match(Or);
-						setState(194);
-						expression(9);
+						setState(199);
+						expression(11);
 						}
 						break;
 					}
 					} 
 				}
-				setState(199);
+				setState(204);
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,14,_ctx);
+				_alt = getInterpreter().adaptivePredict(_input,15,_ctx);
 			}
 			}
 		}
@@ -1821,103 +1890,106 @@ public class SuperBizonchikParser extends Parser {
 	private boolean expression_sempred(ExpressionContext _localctx, int predIndex) {
 		switch (predIndex) {
 		case 0:
-			return precpred(_ctx, 21);
+			return precpred(_ctx, 23);
 		case 1:
-			return precpred(_ctx, 20);
+			return precpred(_ctx, 22);
 		case 2:
-			return precpred(_ctx, 19);
+			return precpred(_ctx, 21);
 		case 3:
-			return precpred(_ctx, 18);
+			return precpred(_ctx, 20);
 		case 4:
-			return precpred(_ctx, 17);
+			return precpred(_ctx, 19);
 		case 5:
-			return precpred(_ctx, 16);
+			return precpred(_ctx, 18);
 		case 6:
-			return precpred(_ctx, 15);
+			return precpred(_ctx, 17);
 		case 7:
-			return precpred(_ctx, 14);
+			return precpred(_ctx, 16);
 		case 8:
-			return precpred(_ctx, 13);
+			return precpred(_ctx, 15);
 		case 9:
-			return precpred(_ctx, 12);
+			return precpred(_ctx, 14);
 		case 10:
-			return precpred(_ctx, 11);
+			return precpred(_ctx, 13);
 		case 11:
-			return precpred(_ctx, 10);
+			return precpred(_ctx, 12);
 		case 12:
-			return precpred(_ctx, 9);
+			return precpred(_ctx, 11);
 		case 13:
-			return precpred(_ctx, 8);
+			return precpred(_ctx, 10);
 		}
 		return true;
 	}
 
 	public static final String _serializedATN =
-		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3)\u00cb\4\2\t\2\4"+
+		"\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3+\u00d0\4\2\t\2\4"+
 		"\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t"+
 		"\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\3\2\3\2\3\2\3\3\3\3\7\3$\n\3\f"+
 		"\3\16\3\'\13\3\3\3\3\3\3\3\3\3\5\3-\n\3\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3"+
-		"\4\5\4\67\n\4\3\5\3\5\3\5\3\5\3\6\3\6\3\6\5\6@\n\6\3\6\3\6\3\6\3\6\5\6"+
-		"F\n\6\3\6\3\6\3\6\3\6\3\6\3\6\5\6N\n\6\3\7\3\7\7\7R\n\7\f\7\16\7U\13\7"+
-		"\3\7\5\7X\n\7\3\7\3\7\3\b\3\b\3\b\3\b\3\b\3\t\3\t\3\t\3\t\3\t\3\t\3\n"+
-		"\3\n\3\n\3\n\3\13\3\13\3\13\3\13\5\13o\n\13\3\13\3\13\3\13\3\13\3\f\3"+
-		"\f\3\f\3\f\3\f\3\f\3\r\3\r\3\r\7\r~\n\r\f\r\16\r\u0081\13\r\3\16\3\16"+
-		"\3\16\7\16\u0086\n\16\f\16\16\16\u0089\13\16\3\17\3\17\3\17\3\17\3\17"+
-		"\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\5\17\u009a\n\17\3\17"+
+		"\4\5\4\67\n\4\3\5\3\5\3\5\3\5\3\5\5\5>\n\5\3\6\3\6\3\6\5\6C\n\6\3\6\3"+
+		"\6\3\6\3\6\5\6I\n\6\3\6\3\6\3\6\3\6\3\6\3\6\5\6Q\n\6\3\7\3\7\7\7U\n\7"+
+		"\f\7\16\7X\13\7\3\7\5\7[\n\7\3\7\3\7\3\b\3\b\3\b\3\b\3\b\3\t\3\t\3\t\3"+
+		"\t\3\t\3\t\3\n\3\n\3\n\3\n\3\13\3\13\3\13\3\13\5\13r\n\13\3\13\3\13\3"+
+		"\13\3\13\3\f\3\f\3\f\3\f\3\f\3\f\3\r\3\r\3\r\7\r\u0081\n\r\f\r\16\r\u0084"+
+		"\13\r\3\16\3\16\3\16\7\16\u0089\n\16\f\16\16\16\u008c\13\16\3\17\3\17"+
+		"\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17"+
+		"\3\17\5\17\u009f\n\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17"+
 		"\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17"+
 		"\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17"+
-		"\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\3\17\7\17"+
-		"\u00c6\n\17\f\17\16\17\u00c9\13\17\3\17\2\3\34\20\2\4\6\b\n\f\16\20\22"+
-		"\24\26\30\32\34\2\2\u00e1\2\36\3\2\2\2\4%\3\2\2\2\6\66\3\2\2\2\b8\3\2"+
-		"\2\2\nM\3\2\2\2\fO\3\2\2\2\16[\3\2\2\2\20`\3\2\2\2\22f\3\2\2\2\24j\3\2"+
-		"\2\2\26t\3\2\2\2\30z\3\2\2\2\32\u0082\3\2\2\2\34\u0099\3\2\2\2\36\37\5"+
-		"\4\3\2\37 \7\2\2\3 \3\3\2\2\2!$\5\6\4\2\"$\5\24\13\2#!\3\2\2\2#\"\3\2"+
-		"\2\2$\'\3\2\2\2%#\3\2\2\2%&\3\2\2\2&,\3\2\2\2\'%\3\2\2\2()\7\b\2\2)*\5"+
-		"\34\17\2*+\7!\2\2+-\3\2\2\2,(\3\2\2\2,-\3\2\2\2-\5\3\2\2\2./\5\b\5\2/"+
-		"\60\7!\2\2\60\67\3\2\2\2\61\62\5\n\6\2\62\63\7!\2\2\63\67\3\2\2\2\64\67"+
-		"\5\f\7\2\65\67\5\26\f\2\66.\3\2\2\2\66\61\3\2\2\2\66\64\3\2\2\2\66\65"+
-		"\3\2\2\2\67\7\3\2\2\289\7&\2\29:\7\"\2\2:;\5\34\17\2;\t\3\2\2\2<=\7&\2"+
-		"\2=?\7\37\2\2>@\5\32\16\2?>\3\2\2\2?@\3\2\2\2@A\3\2\2\2AN\7 \2\2BC\7\3"+
-		"\2\2CE\7\37\2\2DF\5\34\17\2ED\3\2\2\2EF\3\2\2\2FG\3\2\2\2GN\7 \2\2HI\7"+
-		"\4\2\2IJ\7\37\2\2JK\5\34\17\2KL\7 \2\2LN\3\2\2\2M<\3\2\2\2MB\3\2\2\2M"+
-		"H\3\2\2\2N\13\3\2\2\2OS\5\16\b\2PR\5\20\t\2QP\3\2\2\2RU\3\2\2\2SQ\3\2"+
-		"\2\2ST\3\2\2\2TW\3\2\2\2US\3\2\2\2VX\5\22\n\2WV\3\2\2\2WX\3\2\2\2XY\3"+
-		"\2\2\2YZ\7\f\2\2Z\r\3\2\2\2[\\\7\6\2\2\\]\5\34\17\2]^\7\13\2\2^_\5\4\3"+
-		"\2_\17\3\2\2\2`a\7\7\2\2ab\7\6\2\2bc\5\34\17\2cd\7\13\2\2de\5\4\3\2e\21"+
-		"\3\2\2\2fg\7\7\2\2gh\7\13\2\2hi\5\4\3\2i\23\3\2\2\2jk\7\5\2\2kl\7&\2\2"+
-		"ln\7\37\2\2mo\5\30\r\2nm\3\2\2\2no\3\2\2\2op\3\2\2\2pq\7 \2\2qr\5\4\3"+
-		"\2rs\7\f\2\2s\25\3\2\2\2tu\7\t\2\2uv\5\34\17\2vw\7\13\2\2wx\5\4\3\2xy"+
-		"\7\f\2\2y\27\3\2\2\2z\177\7&\2\2{|\7#\2\2|~\7&\2\2}{\3\2\2\2~\u0081\3"+
-		"\2\2\2\177}\3\2\2\2\177\u0080\3\2\2\2\u0080\31\3\2\2\2\u0081\177\3\2\2"+
-		"\2\u0082\u0087\5\34\17\2\u0083\u0084\7#\2\2\u0084\u0086\5\34\17\2\u0085"+
-		"\u0083\3\2\2\2\u0086\u0089\3\2\2\2\u0087\u0085\3\2\2\2\u0087\u0088\3\2"+
-		"\2\2\u0088\33\3\2\2\2\u0089\u0087\3\2\2\2\u008a\u008b\b\17\1\2\u008b\u008c"+
-		"\7\31\2\2\u008c\u009a\5\34\17\31\u008d\u008e\7\25\2\2\u008e\u009a\5\34"+
-		"\17\30\u008f\u009a\7%\2\2\u0090\u009a\7$\2\2\u0091\u009a\7\r\2\2\u0092"+
-		"\u009a\5\n\6\2\u0093\u009a\7&\2\2\u0094\u009a\7\'\2\2\u0095\u0096\7\37"+
-		"\2\2\u0096\u0097\5\34\17\2\u0097\u0098\7 \2\2\u0098\u009a\3\2\2\2\u0099"+
-		"\u008a\3\2\2\2\u0099\u008d\3\2\2\2\u0099\u008f\3\2\2\2\u0099\u0090\3\2"+
-		"\2\2\u0099\u0091\3\2\2\2\u0099\u0092\3\2\2\2\u0099\u0093\3\2\2\2\u0099"+
-		"\u0094\3\2\2\2\u0099\u0095\3\2\2\2\u009a\u00c7\3\2\2\2\u009b\u009c\f\27"+
-		"\2\2\u009c\u009d\7\24\2\2\u009d\u00c6\5\34\17\30\u009e\u009f\f\26\2\2"+
-		"\u009f\u00a0\7\32\2\2\u00a0\u00c6\5\34\17\27\u00a1\u00a2\f\25\2\2\u00a2"+
-		"\u00a3\7\33\2\2\u00a3\u00c6\5\34\17\26\u00a4\u00a5\f\24\2\2\u00a5\u00a6"+
-		"\7\34\2\2\u00a6\u00c6\5\34\17\25\u00a7\u00a8\f\23\2\2\u00a8\u00a9\7\30"+
-		"\2\2\u00a9\u00c6\5\34\17\24\u00aa\u00ab\f\22\2\2\u00ab\u00ac\7\31\2\2"+
-		"\u00ac\u00c6\5\34\17\23\u00ad\u00ae\f\21\2\2\u00ae\u00af\7\22\2\2\u00af"+
-		"\u00c6\5\34\17\22\u00b0\u00b1\f\20\2\2\u00b1\u00b2\7\23\2\2\u00b2\u00c6"+
-		"\5\34\17\21\u00b3\u00b4\f\17\2\2\u00b4\u00b5\7\26\2\2\u00b5\u00c6\5\34"+
-		"\17\20\u00b6\u00b7\f\16\2\2\u00b7\u00b8\7\27\2\2\u00b8\u00c6\5\34\17\17"+
-		"\u00b9\u00ba\f\r\2\2\u00ba\u00bb\7\20\2\2\u00bb\u00c6\5\34\17\16\u00bc"+
-		"\u00bd\f\f\2\2\u00bd\u00be\7\21\2\2\u00be\u00c6\5\34\17\r\u00bf\u00c0"+
-		"\f\13\2\2\u00c0\u00c1\7\17\2\2\u00c1\u00c6\5\34\17\f\u00c2\u00c3\f\n\2"+
-		"\2\u00c3\u00c4\7\16\2\2\u00c4\u00c6\5\34\17\13\u00c5\u009b\3\2\2\2\u00c5"+
-		"\u009e\3\2\2\2\u00c5\u00a1\3\2\2\2\u00c5\u00a4\3\2\2\2\u00c5\u00a7\3\2"+
-		"\2\2\u00c5\u00aa\3\2\2\2\u00c5\u00ad\3\2\2\2\u00c5\u00b0\3\2\2\2\u00c5"+
-		"\u00b3\3\2\2\2\u00c5\u00b6\3\2\2\2\u00c5\u00b9\3\2\2\2\u00c5\u00bc\3\2"+
-		"\2\2\u00c5\u00bf\3\2\2\2\u00c5\u00c2\3\2\2\2\u00c6\u00c9\3\2\2\2\u00c7"+
-		"\u00c5\3\2\2\2\u00c7\u00c8\3\2\2\2\u00c8\35\3\2\2\2\u00c9\u00c7\3\2\2"+
-		"\2\21#%,\66?EMSWn\177\u0087\u0099\u00c5\u00c7";
+		"\3\17\3\17\3\17\3\17\7\17\u00cb\n\17\f\17\16\17\u00ce\13\17\3\17\2\3\34"+
+		"\20\2\4\6\b\n\f\16\20\22\24\26\30\32\34\2\2\u00e9\2\36\3\2\2\2\4%\3\2"+
+		"\2\2\6\66\3\2\2\2\b=\3\2\2\2\nP\3\2\2\2\fR\3\2\2\2\16^\3\2\2\2\20c\3\2"+
+		"\2\2\22i\3\2\2\2\24m\3\2\2\2\26w\3\2\2\2\30}\3\2\2\2\32\u0085\3\2\2\2"+
+		"\34\u009e\3\2\2\2\36\37\5\4\3\2\37 \7\2\2\3 \3\3\2\2\2!$\5\6\4\2\"$\5"+
+		"\24\13\2#!\3\2\2\2#\"\3\2\2\2$\'\3\2\2\2%#\3\2\2\2%&\3\2\2\2&,\3\2\2\2"+
+		"\'%\3\2\2\2()\7\b\2\2)*\5\34\17\2*+\7#\2\2+-\3\2\2\2,(\3\2\2\2,-\3\2\2"+
+		"\2-\5\3\2\2\2./\5\b\5\2/\60\7#\2\2\60\67\3\2\2\2\61\62\5\n\6\2\62\63\7"+
+		"#\2\2\63\67\3\2\2\2\64\67\5\f\7\2\65\67\5\26\f\2\66.\3\2\2\2\66\61\3\2"+
+		"\2\2\66\64\3\2\2\2\66\65\3\2\2\2\67\7\3\2\2\289\7(\2\29:\7$\2\2:>\5\34"+
+		"\17\2;<\7(\2\2<>\5\34\17\2=8\3\2\2\2=;\3\2\2\2>\t\3\2\2\2?@\7(\2\2@B\7"+
+		"!\2\2AC\5\32\16\2BA\3\2\2\2BC\3\2\2\2CD\3\2\2\2DQ\7\"\2\2EF\7\3\2\2FH"+
+		"\7!\2\2GI\5\34\17\2HG\3\2\2\2HI\3\2\2\2IJ\3\2\2\2JQ\7\"\2\2KL\7\4\2\2"+
+		"LM\7!\2\2MN\5\34\17\2NO\7\"\2\2OQ\3\2\2\2P?\3\2\2\2PE\3\2\2\2PK\3\2\2"+
+		"\2Q\13\3\2\2\2RV\5\16\b\2SU\5\20\t\2TS\3\2\2\2UX\3\2\2\2VT\3\2\2\2VW\3"+
+		"\2\2\2WZ\3\2\2\2XV\3\2\2\2Y[\5\22\n\2ZY\3\2\2\2Z[\3\2\2\2[\\\3\2\2\2\\"+
+		"]\7\f\2\2]\r\3\2\2\2^_\7\6\2\2_`\5\34\17\2`a\7\13\2\2ab\5\4\3\2b\17\3"+
+		"\2\2\2cd\7\7\2\2de\7\6\2\2ef\5\34\17\2fg\7\13\2\2gh\5\4\3\2h\21\3\2\2"+
+		"\2ij\7\7\2\2jk\7\13\2\2kl\5\4\3\2l\23\3\2\2\2mn\7\5\2\2no\7(\2\2oq\7!"+
+		"\2\2pr\5\30\r\2qp\3\2\2\2qr\3\2\2\2rs\3\2\2\2st\7\"\2\2tu\5\4\3\2uv\7"+
+		"\f\2\2v\25\3\2\2\2wx\7\t\2\2xy\5\34\17\2yz\7\13\2\2z{\5\4\3\2{|\7\f\2"+
+		"\2|\27\3\2\2\2}\u0082\7(\2\2~\177\7%\2\2\177\u0081\7(\2\2\u0080~\3\2\2"+
+		"\2\u0081\u0084\3\2\2\2\u0082\u0080\3\2\2\2\u0082\u0083\3\2\2\2\u0083\31"+
+		"\3\2\2\2\u0084\u0082\3\2\2\2\u0085\u008a\5\34\17\2\u0086\u0087\7%\2\2"+
+		"\u0087\u0089\5\34\17\2\u0088\u0086\3\2\2\2\u0089\u008c\3\2\2\2\u008a\u0088"+
+		"\3\2\2\2\u008a\u008b\3\2\2\2\u008b\33\3\2\2\2\u008c\u008a\3\2\2\2\u008d"+
+		"\u008e\b\17\1\2\u008e\u008f\7\33\2\2\u008f\u009f\5\34\17\33\u0090\u0091"+
+		"\7\27\2\2\u0091\u009f\5\34\17\32\u0092\u009f\7\'\2\2\u0093\u009f\7&\2"+
+		"\2\u0094\u009f\7\r\2\2\u0095\u009f\5\n\6\2\u0096\u009f\7(\2\2\u0097\u009f"+
+		"\7)\2\2\u0098\u009f\7\16\2\2\u0099\u009f\7\17\2\2\u009a\u009b\7!\2\2\u009b"+
+		"\u009c\5\34\17\2\u009c\u009d\7\"\2\2\u009d\u009f\3\2\2\2\u009e\u008d\3"+
+		"\2\2\2\u009e\u0090\3\2\2\2\u009e\u0092\3\2\2\2\u009e\u0093\3\2\2\2\u009e"+
+		"\u0094\3\2\2\2\u009e\u0095\3\2\2\2\u009e\u0096\3\2\2\2\u009e\u0097\3\2"+
+		"\2\2\u009e\u0098\3\2\2\2\u009e\u0099\3\2\2\2\u009e\u009a\3\2\2\2\u009f"+
+		"\u00cc\3\2\2\2\u00a0\u00a1\f\31\2\2\u00a1\u00a2\7\26\2\2\u00a2\u00cb\5"+
+		"\34\17\32\u00a3\u00a4\f\30\2\2\u00a4\u00a5\7\34\2\2\u00a5\u00cb\5\34\17"+
+		"\31\u00a6\u00a7\f\27\2\2\u00a7\u00a8\7\35\2\2\u00a8\u00cb\5\34\17\30\u00a9"+
+		"\u00aa\f\26\2\2\u00aa\u00ab\7\36\2\2\u00ab\u00cb\5\34\17\27\u00ac\u00ad"+
+		"\f\25\2\2\u00ad\u00ae\7\32\2\2\u00ae\u00cb\5\34\17\26\u00af\u00b0\f\24"+
+		"\2\2\u00b0\u00b1\7\33\2\2\u00b1\u00cb\5\34\17\25\u00b2\u00b3\f\23\2\2"+
+		"\u00b3\u00b4\7\24\2\2\u00b4\u00cb\5\34\17\24\u00b5\u00b6\f\22\2\2\u00b6"+
+		"\u00b7\7\25\2\2\u00b7\u00cb\5\34\17\23\u00b8\u00b9\f\21\2\2\u00b9\u00ba"+
+		"\7\30\2\2\u00ba\u00cb\5\34\17\22\u00bb\u00bc\f\20\2\2\u00bc\u00bd\7\31"+
+		"\2\2\u00bd\u00cb\5\34\17\21\u00be\u00bf\f\17\2\2\u00bf\u00c0\7\22\2\2"+
+		"\u00c0\u00cb\5\34\17\20\u00c1\u00c2\f\16\2\2\u00c2\u00c3\7\23\2\2\u00c3"+
+		"\u00cb\5\34\17\17\u00c4\u00c5\f\r\2\2\u00c5\u00c6\7\21\2\2\u00c6\u00cb"+
+		"\5\34\17\16\u00c7\u00c8\f\f\2\2\u00c8\u00c9\7\20\2\2\u00c9\u00cb\5\34"+
+		"\17\r\u00ca\u00a0\3\2\2\2\u00ca\u00a3\3\2\2\2\u00ca\u00a6\3\2\2\2\u00ca"+
+		"\u00a9\3\2\2\2\u00ca\u00ac\3\2\2\2\u00ca\u00af\3\2\2\2\u00ca\u00b2\3\2"+
+		"\2\2\u00ca\u00b5\3\2\2\2\u00ca\u00b8\3\2\2\2\u00ca\u00bb\3\2\2\2\u00ca"+
+		"\u00be\3\2\2\2\u00ca\u00c1\3\2\2\2\u00ca\u00c4\3\2\2\2\u00ca\u00c7\3\2"+
+		"\2\2\u00cb\u00ce\3\2\2\2\u00cc\u00ca\3\2\2\2\u00cc\u00cd\3\2\2\2\u00cd"+
+		"\35\3\2\2\2\u00ce\u00cc\3\2\2\2\22#%,\66=BHPVZq\u0082\u008a\u009e\u00ca"+
+		"\u00cc";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

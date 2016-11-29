@@ -163,18 +163,6 @@ public interface SuperBizonchikListener extends ParseTreeListener {
 	 */
 	void exitExprList(SuperBizonchikParser.ExprListContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code ltExpression}
-	 * labeled alternative in {@link SuperBizonchikParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void enterLtExpression(SuperBizonchikParser.LtExpressionContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code ltExpression}
-	 * labeled alternative in {@link SuperBizonchikParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void exitLtExpression(SuperBizonchikParser.LtExpressionContext ctx);
-	/**
 	 * Enter a parse tree produced by the {@code gtExpression}
 	 * labeled alternative in {@link SuperBizonchikParser#expression}.
 	 * @param ctx the parse tree
@@ -186,30 +174,6 @@ public interface SuperBizonchikListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitGtExpression(SuperBizonchikParser.GtExpressionContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code boolExpression}
-	 * labeled alternative in {@link SuperBizonchikParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void enterBoolExpression(SuperBizonchikParser.BoolExpressionContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code boolExpression}
-	 * labeled alternative in {@link SuperBizonchikParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void exitBoolExpression(SuperBizonchikParser.BoolExpressionContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code notEqExpression}
-	 * labeled alternative in {@link SuperBizonchikParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void enterNotEqExpression(SuperBizonchikParser.NotEqExpressionContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code notEqExpression}
-	 * labeled alternative in {@link SuperBizonchikParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void exitNotEqExpression(SuperBizonchikParser.NotEqExpressionContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code numberExpression}
 	 * labeled alternative in {@link SuperBizonchikParser#expression}.
@@ -271,6 +235,18 @@ public interface SuperBizonchikListener extends ParseTreeListener {
 	 */
 	void exitMultiplyExpression(SuperBizonchikParser.MultiplyExpressionContext ctx);
 	/**
+	 * Enter a parse tree produced by the {@code incrementExpression}
+	 * labeled alternative in {@link SuperBizonchikParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterIncrementExpression(SuperBizonchikParser.IncrementExpressionContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code incrementExpression}
+	 * labeled alternative in {@link SuperBizonchikParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitIncrementExpression(SuperBizonchikParser.IncrementExpressionContext ctx);
+	/**
 	 * Enter a parse tree produced by the {@code gtEqExpression}
 	 * labeled alternative in {@link SuperBizonchikParser#expression}.
 	 * @param ctx the parse tree
@@ -282,6 +258,114 @@ public interface SuperBizonchikListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitGtEqExpression(SuperBizonchikParser.GtEqExpressionContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code andExpression}
+	 * labeled alternative in {@link SuperBizonchikParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterAndExpression(SuperBizonchikParser.AndExpressionContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code andExpression}
+	 * labeled alternative in {@link SuperBizonchikParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitAndExpression(SuperBizonchikParser.AndExpressionContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code stringExpression}
+	 * labeled alternative in {@link SuperBizonchikParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterStringExpression(SuperBizonchikParser.StringExpressionContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code stringExpression}
+	 * labeled alternative in {@link SuperBizonchikParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitStringExpression(SuperBizonchikParser.StringExpressionContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code expressionExpression}
+	 * labeled alternative in {@link SuperBizonchikParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterExpressionExpression(SuperBizonchikParser.ExpressionExpressionContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code expressionExpression}
+	 * labeled alternative in {@link SuperBizonchikParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitExpressionExpression(SuperBizonchikParser.ExpressionExpressionContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code nullExpression}
+	 * labeled alternative in {@link SuperBizonchikParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterNullExpression(SuperBizonchikParser.NullExpressionContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code nullExpression}
+	 * labeled alternative in {@link SuperBizonchikParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitNullExpression(SuperBizonchikParser.NullExpressionContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code functionCallExpression}
+	 * labeled alternative in {@link SuperBizonchikParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterFunctionCallExpression(SuperBizonchikParser.FunctionCallExpressionContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code functionCallExpression}
+	 * labeled alternative in {@link SuperBizonchikParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitFunctionCallExpression(SuperBizonchikParser.FunctionCallExpressionContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code ltEqExpression}
+	 * labeled alternative in {@link SuperBizonchikParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterLtEqExpression(SuperBizonchikParser.LtEqExpressionContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code ltEqExpression}
+	 * labeled alternative in {@link SuperBizonchikParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitLtEqExpression(SuperBizonchikParser.LtEqExpressionContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code ltExpression}
+	 * labeled alternative in {@link SuperBizonchikParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterLtExpression(SuperBizonchikParser.LtExpressionContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code ltExpression}
+	 * labeled alternative in {@link SuperBizonchikParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitLtExpression(SuperBizonchikParser.LtExpressionContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code boolExpression}
+	 * labeled alternative in {@link SuperBizonchikParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterBoolExpression(SuperBizonchikParser.BoolExpressionContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code boolExpression}
+	 * labeled alternative in {@link SuperBizonchikParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitBoolExpression(SuperBizonchikParser.BoolExpressionContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code notEqExpression}
+	 * labeled alternative in {@link SuperBizonchikParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void enterNotEqExpression(SuperBizonchikParser.NotEqExpressionContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code notEqExpression}
+	 * labeled alternative in {@link SuperBizonchikParser#expression}.
+	 * @param ctx the parse tree
+	 */
+	void exitNotEqExpression(SuperBizonchikParser.NotEqExpressionContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code divideExpression}
 	 * labeled alternative in {@link SuperBizonchikParser#expression}.
@@ -343,42 +427,6 @@ public interface SuperBizonchikListener extends ParseTreeListener {
 	 */
 	void exitEqExpression(SuperBizonchikParser.EqExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code andExpression}
-	 * labeled alternative in {@link SuperBizonchikParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void enterAndExpression(SuperBizonchikParser.AndExpressionContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code andExpression}
-	 * labeled alternative in {@link SuperBizonchikParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void exitAndExpression(SuperBizonchikParser.AndExpressionContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code stringExpression}
-	 * labeled alternative in {@link SuperBizonchikParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void enterStringExpression(SuperBizonchikParser.StringExpressionContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code stringExpression}
-	 * labeled alternative in {@link SuperBizonchikParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void exitStringExpression(SuperBizonchikParser.StringExpressionContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code expressionExpression}
-	 * labeled alternative in {@link SuperBizonchikParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void enterExpressionExpression(SuperBizonchikParser.ExpressionExpressionContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code expressionExpression}
-	 * labeled alternative in {@link SuperBizonchikParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void exitExpressionExpression(SuperBizonchikParser.ExpressionExpressionContext ctx);
-	/**
 	 * Enter a parse tree produced by the {@code addExpression}
 	 * labeled alternative in {@link SuperBizonchikParser#expression}.
 	 * @param ctx the parse tree
@@ -403,39 +451,15 @@ public interface SuperBizonchikListener extends ParseTreeListener {
 	 */
 	void exitSubtractExpression(SuperBizonchikParser.SubtractExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code nullExpression}
+	 * Enter a parse tree produced by the {@code decrementExpression}
 	 * labeled alternative in {@link SuperBizonchikParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void enterNullExpression(SuperBizonchikParser.NullExpressionContext ctx);
+	void enterDecrementExpression(SuperBizonchikParser.DecrementExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code nullExpression}
+	 * Exit a parse tree produced by the {@code decrementExpression}
 	 * labeled alternative in {@link SuperBizonchikParser#expression}.
 	 * @param ctx the parse tree
 	 */
-	void exitNullExpression(SuperBizonchikParser.NullExpressionContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code functionCallExpression}
-	 * labeled alternative in {@link SuperBizonchikParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void enterFunctionCallExpression(SuperBizonchikParser.FunctionCallExpressionContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code functionCallExpression}
-	 * labeled alternative in {@link SuperBizonchikParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void exitFunctionCallExpression(SuperBizonchikParser.FunctionCallExpressionContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code ltEqExpression}
-	 * labeled alternative in {@link SuperBizonchikParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void enterLtEqExpression(SuperBizonchikParser.LtEqExpressionContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code ltEqExpression}
-	 * labeled alternative in {@link SuperBizonchikParser#expression}.
-	 * @param ctx the parse tree
-	 */
-	void exitLtEqExpression(SuperBizonchikParser.LtEqExpressionContext ctx);
+	void exitDecrementExpression(SuperBizonchikParser.DecrementExpressionContext ctx);
 }

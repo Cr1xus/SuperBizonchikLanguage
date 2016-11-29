@@ -2,9 +2,55 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cddaa081-2c57-4b3d-9f76-004374140bf3" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/EvalVisitor.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/EvalVisitor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/Scope.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/Scope.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikBaseListener.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikBaseListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikBaseVisitor.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikBaseVisitor.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikLexer.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikLexer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikListener.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$AddExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$AddExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$AndExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$AndExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$AssignmentContext.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$AssignmentContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$BlockContext.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$BlockContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$BoolExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$BoolExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$DivideExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$DivideExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$ElseIfStatContext.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$ElseIfStatContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$ElseStatContext.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$ElseStatContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$EqExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$EqExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$ExprListContext.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$ExprListContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$ExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$ExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$ExpressionExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$ExpressionExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$FunctionCallContext.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$FunctionCallContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$FunctionCallExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$FunctionCallExpressionContext.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$FunctionDeclContext.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$FunctionDeclContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$GtEqExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$GtEqExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$GtExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$GtExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$IdListContext.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$IdListContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$IdentifierExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$IdentifierExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$IdentifierFunctionCallContext.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$IdentifierFunctionCallContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$IfStatContext.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$IfStatContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$IfStatementContext.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$IfStatementContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$LtEqExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$LtEqExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$LtExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$LtExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$ModulusExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$ModulusExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$MultiplyExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$MultiplyExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$NotEqExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$NotEqExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$NotExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$NotExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$NullExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$NullExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$NumberExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$NumberExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$OrExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$OrExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$ParseContext.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$ParseContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$PowerExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$PowerExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$PrintFunctionCallContext.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$PrintFunctionCallContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$PrintlnFunctionCallContext.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$PrintlnFunctionCallContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$StatementContext.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$StatementContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$StringExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$StringExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$SubtractExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$SubtractExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$UnaryMinusExpressionContext.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$UnaryMinusExpressionContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$WhileStatementContext.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser$WhileStatementContext.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikParser.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikValue.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikValue.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikVisitor.class" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikVisitor.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/SuperBizonchik.tokens" afterPath="$PROJECT_DIR$/gen/SuperBizonchik.tokens" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/SuperBizonchikBaseListener.java" afterPath="$PROJECT_DIR$/gen/SuperBizonchikBaseListener.java" />
@@ -17,7 +63,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchik.g4" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchik.g4" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchik.tokens" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchik.tokens" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikLexer.tokens" afterPath="$PROJECT_DIR$/out/production/SuperBizonchikLanguage/SuperBizonchikLexer.tokens" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EvalVisitor.java" afterPath="$PROJECT_DIR$/src/EvalVisitor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Scope.java" afterPath="$PROJECT_DIR$/src/Scope.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SuperBizonchik.g4" afterPath="$PROJECT_DIR$/src/SuperBizonchik.g4" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SuperBizonchikValue.java" afterPath="$PROJECT_DIR$/src/SuperBizonchikValue.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.sb" afterPath="$PROJECT_DIR$/test.sb" />
     </list>
     <ignored path="SuperBizonchikLanguage.iws" />
@@ -42,8 +91,8 @@
       <file leaf-file-name="SuperBizonchik.g4" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SuperBizonchik.g4">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-15">
-              <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+            <state relative-caret-position="345">
+              <caret line="84" column="53" selection-start-line="84" selection-start-column="53" selection-end-line="84" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -52,8 +101,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+            <state relative-caret-position="240">
+              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -65,22 +114,9 @@
       <file leaf-file-name="test.sb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test.sb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+            <state relative-caret-position="90">
+              <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="12" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Function.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Function.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -88,8 +124,8 @@
       <file leaf-file-name="Scope.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Scope.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="84" column="21" selection-start-line="84" selection-start-column="21" selection-end-line="84" selection-end-column="21" />
+            <state relative-caret-position="228">
+              <caret line="34" column="34" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -101,12 +137,44 @@
       <file leaf-file-name="EvalVisitor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/EvalVisitor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
-              <caret line="418" column="13" selection-start-line="418" selection-start-column="11" selection-end-line="418" selection-end-column="13" />
+            <state relative-caret-position="223">
+              <caret line="330" column="66" selection-start-line="330" selection-start-column="66" selection-end-line="330" selection-end-column="66" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SuperBizonchikParser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gen/SuperBizonchikParser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="588">
+              <caret line="273" column="0" selection-start-line="273" selection-start-column="0" selection-end-line="273" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractParseTreeVisitor.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/antlr-4.5.1-complete.jar!/org/antlr/v4/runtime/tree/AbstractParseTreeVisitor.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding>
+                <element signature="e#577#578#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SuperBizonchikBaseVisitor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gen/SuperBizonchikBaseVisitor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="131">
+              <caret line="32" column="82" selection-start-line="32" selection-start-column="82" selection-end-line="32" selection-end-column="82" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -114,38 +182,11 @@
       <file leaf-file-name="EvalException.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/EvalException.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
+            <state relative-caret-position="75">
               <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <element signature="e#192#193#0" expanded="true" />
-                <element signature="e#255#256#0" expanded="true" />
-                <element signature="e#318#319#0" expanded="true" />
-                <element signature="e#373#374#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SymbolVisitor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SymbolVisitor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReturnValue.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ReturnValue.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -153,34 +194,16 @@
       <file leaf-file-name="SuperBizonchikValue.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SuperBizonchikValue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+            <state relative-caret-position="277">
+              <caret line="122" column="39" selection-start-line="122" selection-start-column="39" selection-end-line="122" selection-end-column="39" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <element signature="e#866#867#0" expanded="true" />
-                <element signature="e#903#904#0" expanded="true" />
-                <element signature="e#937#938#0" expanded="true" />
-                <element signature="e#986#987#0" expanded="true" />
-                <element signature="e#1018#1019#0" expanded="true" />
-                <element signature="e#1070#1071#0" expanded="true" />
-                <element signature="e#1098#1099#0" expanded="true" />
-                <element signature="e#1148#1149#0" expanded="true" />
-                <element signature="e#1180#1181#0" expanded="true" />
-                <element signature="e#1216#1217#0" expanded="true" />
-                <element signature="e#2483#2484#0" expanded="true" />
-                <element signature="e#2522#2523#0" expanded="true" />
-                <element signature="e#2556#2557#0" expanded="true" />
-                <element signature="e#2603#2604#0" expanded="true" />
-                <element signature="e#2636#2637#0" expanded="true" />
-                <element signature="e#2682#2683#0" expanded="true" />
-                <element signature="e#2713#2714#0" expanded="true" />
-                <element signature="e#2748#2749#0" expanded="true" />
-                <element signature="e#2779#2780#0" expanded="true" />
-                <element signature="e#2814#2815#0" expanded="true" />
-                <element signature="e#2847#2848#0" expanded="true" />
-                <element signature="e#2893#2894#0" expanded="true" />
-                <element signature="e#2939#2940#0" expanded="true" />
-                <element signature="e#3023#3024#0" expanded="true" />
+                <element signature="e#1264#1265#0" expanded="true" />
+                <element signature="e#1314#1315#0" expanded="true" />
+                <element signature="e#3229#3230#0" expanded="true" />
+                <element signature="e#3283#3284#0" expanded="true" />
+                <element signature="e#3328#3329#0" expanded="true" />
+                <element signature="e#3382#3383#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -208,15 +231,15 @@
       <list>
         <option value="$PROJECT_DIR$/src/antlr.g4" />
         <option value="$PROJECT_DIR$/src/EvalException.java" />
-        <option value="$PROJECT_DIR$/src/Scope.java" />
         <option value="$PROJECT_DIR$/src/Function.java" />
         <option value="$PROJECT_DIR$/src/ReturnValue.java" />
         <option value="$PROJECT_DIR$/src/SymbolVisitor.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/test.sb" />
-        <option value="$PROJECT_DIR$/src/SuperBizonchikValue.java" />
-        <option value="$PROJECT_DIR$/src/EvalVisitor.java" />
         <option value="$PROJECT_DIR$/src/SuperBizonchik.g4" />
+        <option value="$PROJECT_DIR$/src/EvalVisitor.java" />
+        <option value="$PROJECT_DIR$/src/SuperBizonchikValue.java" />
+        <option value="$PROJECT_DIR$/src/Scope.java" />
         <option value="$PROJECT_DIR$/test.sb" />
       </list>
     </option>
@@ -596,12 +619,12 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Tool Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23493975" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.4904762" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.47142857" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31960228" sideWeight="0.12857144" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31960228" sideWeight="0.16428572" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31960228" sideWeight="0.87142855" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31960228" sideWeight="0.8357143" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -611,7 +634,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39914772" sideWeight="0.4873016" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -634,7 +657,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -709,10 +732,6 @@
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#192#193#0" expanded="true" />
-            <element signature="e#255#256#0" expanded="true" />
-            <element signature="e#318#319#0" expanded="true" />
-            <element signature="e#373#374#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -742,85 +761,12 @@
           <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#866#867#0" expanded="true" />
-            <element signature="e#903#904#0" expanded="true" />
-            <element signature="e#937#938#0" expanded="true" />
-            <element signature="e#986#987#0" expanded="true" />
-            <element signature="e#1018#1019#0" expanded="true" />
-            <element signature="e#1070#1071#0" expanded="true" />
-            <element signature="e#1098#1099#0" expanded="true" />
-            <element signature="e#1148#1149#0" expanded="true" />
-            <element signature="e#1180#1181#0" expanded="true" />
-            <element signature="e#1216#1217#0" expanded="true" />
-            <element signature="e#2483#2484#0" expanded="true" />
-            <element signature="e#2522#2523#0" expanded="true" />
-            <element signature="e#2556#2557#0" expanded="true" />
-            <element signature="e#2603#2604#0" expanded="true" />
-            <element signature="e#2636#2637#0" expanded="true" />
-            <element signature="e#2682#2683#0" expanded="true" />
-            <element signature="e#2713#2714#0" expanded="true" />
-            <element signature="e#2748#2749#0" expanded="true" />
-            <element signature="e#2779#2780#0" expanded="true" />
-            <element signature="e#2814#2815#0" expanded="true" />
-            <element signature="e#2847#2848#0" expanded="true" />
-            <element signature="e#2893#2894#0" expanded="true" />
-            <element signature="e#2939#2940#0" expanded="true" />
-            <element signature="e#3023#3024#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gen/SuperBizonchikBaseVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SuperBizonchikValue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#866#867#0" expanded="true" />
-            <element signature="e#903#904#0" expanded="true" />
-            <element signature="e#937#938#0" expanded="true" />
-            <element signature="e#986#987#0" expanded="true" />
-            <element signature="e#1018#1019#0" expanded="true" />
-            <element signature="e#1070#1071#0" expanded="true" />
-            <element signature="e#1098#1099#0" expanded="true" />
-            <element signature="e#1148#1149#0" expanded="true" />
-            <element signature="e#1180#1181#0" expanded="true" />
-            <element signature="e#1216#1217#0" expanded="true" />
-            <element signature="e#2483#2484#0" expanded="true" />
-            <element signature="e#2522#2523#0" expanded="true" />
-            <element signature="e#2556#2557#0" expanded="true" />
-            <element signature="e#2603#2604#0" expanded="true" />
-            <element signature="e#2636#2637#0" expanded="true" />
-            <element signature="e#2682#2683#0" expanded="true" />
-            <element signature="e#2713#2714#0" expanded="true" />
-            <element signature="e#2748#2749#0" expanded="true" />
-            <element signature="e#2779#2780#0" expanded="true" />
-            <element signature="e#2814#2815#0" expanded="true" />
-            <element signature="e#2847#2848#0" expanded="true" />
-            <element signature="e#2893#2894#0" expanded="true" />
-            <element signature="e#2939#2940#0" expanded="true" />
-            <element signature="e#3023#3024#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EvalException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#192#193#0" expanded="true" />
-            <element signature="e#255#256#0" expanded="true" />
-            <element signature="e#318#319#0" expanded="true" />
-            <element signature="e#373#374#0" expanded="true" />
+            <element signature="e#1264#1265#0" expanded="true" />
+            <element signature="e#1314#1315#0" expanded="true" />
+            <element signature="e#3229#3230#0" expanded="true" />
+            <element signature="e#3283#3284#0" expanded="true" />
+            <element signature="e#3328#3329#0" expanded="true" />
+            <element signature="e#3382#3383#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -836,25 +782,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Scope.java">
+    <entry file="file://$PROJECT_DIR$/src/ReturnValue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="84" column="21" selection-start-line="84" selection-start-column="21" selection-end-line="84" selection-end-column="21" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EvalVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="418" column="13" selection-start-line="418" selection-start-column="11" selection-end-line="418" selection-end-column="13" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="60">
+          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -869,18 +801,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ReturnValue.java">
+    <entry file="file://$PROJECT_DIR$/src/EvalException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gen/SuperBizonchikBaseVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="32" column="82" selection-start-line="32" selection-start-column="82" selection-end-line="32" selection-end-column="82" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gen/SuperBizonchikParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="273" column="0" selection-start-line="273" selection-start-column="0" selection-end-line="273" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/antlr-4.5.1-complete.jar!/org/antlr/v4/runtime/tree/AbstractParseTreeVisitor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="e#577#578#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+        <state relative-caret-position="240">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
@@ -890,16 +850,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SuperBizonchik.g4">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
-          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+        <state relative-caret-position="345">
+          <caret line="84" column="53" selection-start-line="84" selection-start-column="53" selection-end-line="84" selection-end-column="53" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SuperBizonchikValue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="122" column="39" selection-start-line="122" selection-start-column="39" selection-end-line="122" selection-end-column="39" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#1264#1265#0" expanded="true" />
+            <element signature="e#1314#1315#0" expanded="true" />
+            <element signature="e#3229#3230#0" expanded="true" />
+            <element signature="e#3283#3284#0" expanded="true" />
+            <element signature="e#3328#3329#0" expanded="true" />
+            <element signature="e#3382#3383#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EvalVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="330" column="66" selection-start-line="330" selection-start-column="66" selection-end-line="330" selection-end-column="66" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Scope.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="34" column="34" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.sb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+        <state relative-caret-position="90">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="12" />
           <folding />
         </state>
       </provider>

@@ -7,6 +7,8 @@ public class SuperBizonchikValue implements Comparable<SuperBizonchikValue> {
 
     public static final SuperBizonchikValue NULL = new SuperBizonchikValue();
     public static final SuperBizonchikValue VOID = new SuperBizonchikValue();
+    public static final SuperBizonchikValue DECREMENT = new SuperBizonchikValue();
+    public static final SuperBizonchikValue INCREMENT = new SuperBizonchikValue();
 
     private Object value;
 
@@ -106,13 +108,24 @@ public class SuperBizonchikValue implements Comparable<SuperBizonchikValue> {
         return this == VOID;
     }
 
+    public boolean isDecrement() {return this == DECREMENT; }
+    public boolean isIncrement() {return this == INCREMENT; }
+
     public boolean isString() {
         return value instanceof String;
     }
 
+    public void decrementValue(int amount){
+        this.value = this.asInteger() - amount;
+    }
+
+    public void incrementValue(int amount){
+        this.value = this.asInteger() + amount;
+    }
+
     @Override
     public String toString() {
-        return isNull() ? "NULL" : isVoid() ? "VOID" : String.valueOf(value);
+        return isNull() ? "NULL" : isVoid() ? "VOID" : isNumber() ? this.asInteger().toString(): String.valueOf(value);
     }
 }
 

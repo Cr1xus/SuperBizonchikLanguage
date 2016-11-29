@@ -210,6 +210,11 @@ public class EvalVisitor extends SuperBizonchikBaseVisitor<SuperBizonchikValue> 
         throw new EvalException(ctx);
     }
 
+
+
+
+
+
     // expression '==' expression               #eqExpression
     @Override
     public SuperBizonchikValue visitEqExpression(@NotNull SuperBizonchikParser.EqExpressionContext ctx) {
@@ -305,6 +310,18 @@ public class EvalVisitor extends SuperBizonchikBaseVisitor<SuperBizonchikValue> 
         return val;
     }
 
+    // decrement
+    @Override
+    public SuperBizonchikValue visitDecrementExpression(SuperBizonchikParser.DecrementExpressionContext ctx){
+        return SuperBizonchikValue.DECREMENT;
+    }
+
+    //increment
+    @Override
+    public SuperBizonchikValue visitIncrementExpression(SuperBizonchikParser.IncrementExpressionContext ctx){
+        return SuperBizonchikValue.INCREMENT;
+    }
+
 
     // assignment
     // : Identifier '=' expression
@@ -313,6 +330,7 @@ public class EvalVisitor extends SuperBizonchikBaseVisitor<SuperBizonchikValue> 
     public SuperBizonchikValue visitAssignment(@NotNull SuperBizonchikParser.AssignmentContext ctx) {
         SuperBizonchikValue newVal = this.visit(ctx.expression());
         String id = ctx.Identifier().getText();
+
         scope.assign(id, newVal);
         return SuperBizonchikValue.VOID;
     }

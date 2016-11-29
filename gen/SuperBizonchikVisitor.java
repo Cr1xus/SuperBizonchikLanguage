@@ -103,33 +103,12 @@ public interface SuperBizonchikVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitExprList(SuperBizonchikParser.ExprListContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code ltExpression}
-	 * labeled alternative in {@link SuperBizonchikParser#expression}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitLtExpression(SuperBizonchikParser.LtExpressionContext ctx);
-	/**
 	 * Visit a parse tree produced by the {@code gtExpression}
 	 * labeled alternative in {@link SuperBizonchikParser#expression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitGtExpression(SuperBizonchikParser.GtExpressionContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code boolExpression}
-	 * labeled alternative in {@link SuperBizonchikParser#expression}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitBoolExpression(SuperBizonchikParser.BoolExpressionContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code notEqExpression}
-	 * labeled alternative in {@link SuperBizonchikParser#expression}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitNotEqExpression(SuperBizonchikParser.NotEqExpressionContext ctx);
 	/**
 	 * Visit a parse tree produced by the {@code numberExpression}
 	 * labeled alternative in {@link SuperBizonchikParser#expression}.
@@ -166,12 +145,82 @@ public interface SuperBizonchikVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitMultiplyExpression(SuperBizonchikParser.MultiplyExpressionContext ctx);
 	/**
+	 * Visit a parse tree produced by the {@code incrementExpression}
+	 * labeled alternative in {@link SuperBizonchikParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitIncrementExpression(SuperBizonchikParser.IncrementExpressionContext ctx);
+	/**
 	 * Visit a parse tree produced by the {@code gtEqExpression}
 	 * labeled alternative in {@link SuperBizonchikParser#expression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitGtEqExpression(SuperBizonchikParser.GtEqExpressionContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code andExpression}
+	 * labeled alternative in {@link SuperBizonchikParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAndExpression(SuperBizonchikParser.AndExpressionContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code stringExpression}
+	 * labeled alternative in {@link SuperBizonchikParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitStringExpression(SuperBizonchikParser.StringExpressionContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code expressionExpression}
+	 * labeled alternative in {@link SuperBizonchikParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExpressionExpression(SuperBizonchikParser.ExpressionExpressionContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code nullExpression}
+	 * labeled alternative in {@link SuperBizonchikParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitNullExpression(SuperBizonchikParser.NullExpressionContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code functionCallExpression}
+	 * labeled alternative in {@link SuperBizonchikParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFunctionCallExpression(SuperBizonchikParser.FunctionCallExpressionContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code ltEqExpression}
+	 * labeled alternative in {@link SuperBizonchikParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitLtEqExpression(SuperBizonchikParser.LtEqExpressionContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code ltExpression}
+	 * labeled alternative in {@link SuperBizonchikParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitLtExpression(SuperBizonchikParser.LtExpressionContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code boolExpression}
+	 * labeled alternative in {@link SuperBizonchikParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitBoolExpression(SuperBizonchikParser.BoolExpressionContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code notEqExpression}
+	 * labeled alternative in {@link SuperBizonchikParser#expression}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitNotEqExpression(SuperBizonchikParser.NotEqExpressionContext ctx);
 	/**
 	 * Visit a parse tree produced by the {@code divideExpression}
 	 * labeled alternative in {@link SuperBizonchikParser#expression}.
@@ -208,27 +257,6 @@ public interface SuperBizonchikVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitEqExpression(SuperBizonchikParser.EqExpressionContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code andExpression}
-	 * labeled alternative in {@link SuperBizonchikParser#expression}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitAndExpression(SuperBizonchikParser.AndExpressionContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code stringExpression}
-	 * labeled alternative in {@link SuperBizonchikParser#expression}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitStringExpression(SuperBizonchikParser.StringExpressionContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code expressionExpression}
-	 * labeled alternative in {@link SuperBizonchikParser#expression}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitExpressionExpression(SuperBizonchikParser.ExpressionExpressionContext ctx);
-	/**
 	 * Visit a parse tree produced by the {@code addExpression}
 	 * labeled alternative in {@link SuperBizonchikParser#expression}.
 	 * @param ctx the parse tree
@@ -243,24 +271,10 @@ public interface SuperBizonchikVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitSubtractExpression(SuperBizonchikParser.SubtractExpressionContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code nullExpression}
+	 * Visit a parse tree produced by the {@code decrementExpression}
 	 * labeled alternative in {@link SuperBizonchikParser#expression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitNullExpression(SuperBizonchikParser.NullExpressionContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code functionCallExpression}
-	 * labeled alternative in {@link SuperBizonchikParser#expression}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitFunctionCallExpression(SuperBizonchikParser.FunctionCallExpressionContext ctx);
-	/**
-	 * Visit a parse tree produced by the {@code ltEqExpression}
-	 * labeled alternative in {@link SuperBizonchikParser#expression}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitLtEqExpression(SuperBizonchikParser.LtEqExpressionContext ctx);
+	T visitDecrementExpression(SuperBizonchikParser.DecrementExpressionContext ctx);
 }

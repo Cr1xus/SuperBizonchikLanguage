@@ -17,6 +17,7 @@ statement
 
 assignment
  : Identifier '=' expression
+ | Identifier expression
  ;
 
 functionCall
@@ -81,6 +82,8 @@ expression
  | functionCall                             #functionCallExpression
  | Identifier                               #identifierExpression
  | String                                   #stringExpression
+ | Decrement                                #decrementExpression
+ | Increment                                #incrementExpression
  | '(' expression ')'                       #expressionExpression
  ;
 
@@ -96,6 +99,10 @@ Do       : 'do';
 End      : 'end';
 Null     : 'null';
 
+
+
+Decrement: '--';
+Increment: '++';
 Or       : '||';
 And      : '&&';
 Equals   : '==';
